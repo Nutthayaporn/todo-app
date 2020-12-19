@@ -29,10 +29,11 @@
     flex: 1;
     .title-wrapper {
       margin-left: 16px;
+      padding: 6px 0;
       .title {
         font-size: 16px;
         color: #2e2e2e;
-        margin: 0;
+        word-break: break-word;
         &.checked {
           text-decoration-line: line-through;
           color: #a9a9a9;
@@ -62,7 +63,6 @@
         }
         .title {
           font-size: 14px;
-          margin: 0;
           color: #2e2e2e;
         }
         &.active {

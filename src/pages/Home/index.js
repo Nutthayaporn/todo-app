@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useStoreState, useStoreActions } from "easy-peasy";
 
-import { TodoItem, Select, TodoInput } from "../../components";
+import { TodoItem, Select, TodoInput, ProgressBar } from "../../components";
 
 export default function Home() {
   const [filterTask, setFilterTask] = useState(null);
@@ -24,9 +24,22 @@ export default function Home() {
     displayTasks = displayTasks.filter((task) => !task.completed);
   }
 
+  const taskCompleted = tasks.filter((task) => task.completed);
+  const countTaskCompleted = taskCompleted.length;
+  const countTasks = tasks.length;
+
+  const progressPercentage = (100 * countTaskCompleted) / countTasks;
+
   return (
     <div className="home-page">
       <div className="content">
+        <div className="progress-bar-wraper">
+          <p className="prograss-title">Progress</p>
+          <div className="progress-bar">
+            <ProgressBar percentage={progressPercentage} />
+          </div>
+          <p className="task-completed">{countTaskCompleted} completed</p>
+        </div>
         <div className="title-bar">
           <p className="title">Tasks</p>
           <div className="select-wrapper">

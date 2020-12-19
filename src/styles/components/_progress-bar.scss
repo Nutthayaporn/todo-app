@@ -1,0 +1,12 @@
+.progress-bar-component {
+  width: 100%;
+  height: 7.34px;
+  background: #3b3b3b;
+  border-radius: 100px;
+  .complete {
+    transition: all 0.4s;
+    height: 100%;
+    border-radius: 100px;
+    background: #ffffff;
+  }
+}

@@ -1,16 +1,36 @@
 .home-page {
-  background-color: #e5e5e5;
+  background-color: #d1d0d9;
   min-height: 100vh;
+  padding: 42px 15px;
   .content {
     max-width: 720px;
     margin: auto;
-    padding: 60px 100px;
+    padding: 4.5% 5%;
     background-color: #f5f5f5;
+    border-radius: 20px;
+    .progress-bar-wraper {
+      padding: 18px 19px;
+      background: #e07c7c;
+      border-radius: 20px;
+      .prograss-title {
+        font-weight: 500;
+        font-size: 28px;
+        color: #ffffff;
+      }
+      .progress-bar {
+        margin: 12px 0;
+      }
+      .task-completed {
+        font-size: 16px;
+        color: #ebb9b8;
+      }
+    }
     .title-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 16px;
+      margin-top: 32px;
       > .title {
         font-weight: 500;
         font-size: 24px;
@@ -21,8 +41,6 @@
       .task-item {
         margin-bottom: 16px;
       }
-    }
-    .task-input-wrapper {
     }
   }
 }
